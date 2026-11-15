@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sky-blue: #B9EFFF;
+    --bright-cyan: #35BDEB;
+    --deep-blue: #0879CF;
+    --vibrant-orange: #FF4B0B;
+    --dark-text: #151B24;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #EAF5FA;
+    color: #151B24;
+    font-family: 'Avenir', 'Avenir Light', 'Avenir Next', 'Nunito Sans', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    font-weight: 300;
+  }
+}
+
+/* Typography: Hybrid Adobe Caslon (Upright for Main Titles, Italic for Treatments & Subheadings) */
+.font-caslon {
+  font-family: 'Adobe Caslon Pro', 'Adobe Caslon', 'Libre Caslon Text', Caslon, Georgia, serif;
+  font-style: normal;
+}
+
+.font-caslon-italic {
+  font-family: 'Adobe Caslon Pro', 'Adobe Caslon', 'Libre Caslon Text', Caslon, Georgia, serif;
+  font-style: italic;
+}
+
+.font-avenir-light {
+  font-family: 'Avenir', 'Avenir Light', 'Avenir Next', 'Nunito Sans', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #EAF5FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #B9EFFF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #35BDEB;
+}
+
+/* Pure Solid Luxury Gradients (Zero Flashing Lights) */
+.text-gradient-cyan-blue {
+  background: linear-gradient(180deg, #35BDEB 0%, #0879CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan-blue-h {
+  background: linear-gradient(90deg, #35BDEB 0%, #0879CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(180deg, #B38F48 0%, #8A6D3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-slate {
+  background: linear-gradient(180deg, #0F172A 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Glassmorphism & Borders */
+.luxury-glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 50px -15px rgba(8, 121, 207, 0.07), 0 0 0 1px rgba(228, 248, 255, 0.6) inset;
+}
+
+.luxury-ambient-halo {
+  background: radial-gradient(circle at 50% 50%, rgba(53, 189, 235, 0.18) 0%, rgba(185, 239, 255, 0.08) 50%, transparent 75%);
+}
+
+/* High-contrast Orange CTA */
+.btn-orange-cta {
+  background-color: #FF4B0B;
+  color: #FFFFFF;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-orange-cta:hover {
+  background-color: #E53E04;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(255, 75, 11, 0.35);
+}
+
+/* Pause animation on hover */
+.pause-hover:hover {
+  animation-play-state: paused;
+}
